@@ -1,8 +1,7 @@
-
 declare global {
-  type Children = {
-    children: ReactNodea
-  }
+    type Children = {
+        children: ReactNodea;
+    };
 }
 
-export { }
+export {};
