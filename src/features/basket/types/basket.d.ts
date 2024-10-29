@@ -1,20 +1,25 @@
-export type ViewMode = 'grid' | 'list'
-
-export type Product = {
-    sku: number
-    name: string
-    description: string
-    price: number
-    stock: number
-    maxQty: number
-    image: string
+export interface Product {
+  sku: number
+  name: string
+  description: string
+  price: number
+  basketLimit: number
 }
 
-export type BasketItem = {
-    sku: number
-    quantity: number
+export interface BasketItem {
+  sku: number
+  quantity: number
 }
 
-export type Basket = {
-    items: BasketItem[]
+export interface BasketState {
+  items: BasketItem[]
+  cardNumber: string
+  isCheckoutComplete: boolean
+}
+
+export interface ProductCardProps {
+  product: Product
+  quantity: number
+  onAdd: (sku: number) => void
+  onRemove: (sku: number) => void
 }

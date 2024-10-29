@@ -1,63 +1,57 @@
-import { Product } from '../types/basket'
-
-const MOCK_PRODUCTS: Product[] = [
-    {
-        sku: 1,
-        name: "Premium Wireless Headphones",
-        description: "High-quality wireless headphones with noise cancellation",
-        price: 199.99,
-        stock: 10,
-        maxQty: 2,
-        image: "https://source.unsplash.com/random/400x400/?headphones"
-    },
-    {
-        sku: 2,
-        name: "Smart Watch Pro",
-        description: "Advanced smartwatch with health tracking features",
-        price: 299.99,
-        stock: 15,
-        maxQty: 1,
-        image: "https://source.unsplash.com/random/400x400/?smartwatch"
-    },
-    {
-        sku: 3,
-        name: "4K Gaming Monitor",
-        description: "Ultra-wide 4K gaming monitor with HDR",
-        price: 499.99,
-        stock: 5,
-        maxQty: 1,
-        image: "https://source.unsplash.com/random/400x400/?monitor"
-    },
-    {
-        sku: 4,
-        name: "Mechanical Keyboard",
-        description: "RGB mechanical gaming keyboard with custom switches",
-        price: 129.99,
-        stock: 20,
-        maxQty: 2,
-        image: "https://source.unsplash.com/random/400x400/?keyboard"
-    },
-    {
-        sku: 5,
-        name: "Gaming Mouse",
-        description: "High-precision gaming mouse with adjustable DPI",
-        price: 79.99,
-        stock: 25,
-        maxQty: 2,
-        image: "https://source.unsplash.com/random/400x400/?mouse"
-    },
-    {
-        sku: 6,
-        name: "Laptop Stand",
-        description: "Ergonomic aluminum laptop stand with cooling",
-        price: 49.99,
-        stock: 30,
-        maxQty: 3,
-        image: "https://source.unsplash.com/random/400x400/?laptop-stand"
-    }
+import type { Product } from '../types/basket'
+const products: Product[] = [
+  {
+    "sku": 1,
+    "name": "Red Product",
+    "description": "Red Product description",
+    "price": 1.01,
+    "basketLimit": 5
+  },
+  {
+    "sku": 2,
+    "name": "Orange Product",
+    "description": "Orange Product description",
+    "price": 2.02,
+    "basketLimit": 4
+  },
+  {
+    "sku": 3,
+    "name": "Yellow Product",
+    "description": "Yellow Product description",
+    "price": 3.03,
+    "basketLimit": 3
+  },
+  {
+    "sku": 4,
+    "name": "Green Product",
+    "description": "Green Product description",
+    "price": 4.04,
+    "basketLimit": 2
+  },
+  {
+    "sku": 5,
+    "name": "Blue Product",
+    "description": "Blue Product description",
+    "price": 5.05,
+    "basketLimit": 1
+  }
 ]
 
-export const getProducts = () => MOCK_PRODUCTS
+export const getProducts = (): Product[] => products
 
-export const getProduct = (sku: number) =>
-    MOCK_PRODUCTS.find(product => product.sku === sku)
+export const getProduct = (sku: number): Product | undefined =>
+  products.find(product => product.sku === sku)
+
+export const sampleBasket = {
+  "basket": [
+    {
+      "sku": 1,
+      "quantity": 5
+    },
+    {
+      "sku": 3,
+      "quantity": 1
+    }
+  ],
+  "cardNumber": "5187447361867259"
+}
