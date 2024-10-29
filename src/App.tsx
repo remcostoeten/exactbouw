@@ -1,14 +1,16 @@
-import { Button } from './components/ui/button';
+import AppProviders from '@/core/providers/app-providers'
+import Checkout from '@/features/basket/components/checkout'
+import { ROUTES } from '@/router/routes'
+import { Route, Switch } from 'wouter'
+import ProductList from './features/basket/components/product-list'
 
 export default function App() {
-    return (
-        <div className="w-screen h-screen grid place-items-center gap-4">
-            <Button>Default</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="destructive">Destructive</Button>
-            <Button variant="outline">Outline</Button>
-            <Button variant="ghost">Ghost</Button>
-            <Button variant="link">Link</Button>
-        </div>
-    );
+  return (
+    <AppProviders>
+      <Switch>
+        <Route path={ROUTES.HOME} component={ProductList} />
+        <Route path={ROUTES.CHECKOUT} component={Checkout} />
+      </Switch>
+    </AppProviders>
+  )
 }
