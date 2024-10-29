@@ -16,18 +16,26 @@ export default function ProductCard({ product, quantity, onAdd, onRemove, viewMo
             `}
             >
                 <CardHeader>
-                    <CardTitle className="text-foreground">{product.name}</CardTitle>
+                    <CardTitle className="text-foreground flex justify-between items-center">
+                        <span>{product.name}</span>
+                        <span className="text-xs text-muted-foreground">SKU: {product.sku}</span>
+                    </CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p className="text-muted-foreground">{product.description}</p>
-                    <p className="text-lg font-bold mt-2 text-foreground">
-                        €{product.price.toFixed(2)}
-                    </p>
+                    <div className="flex justify-between items-center mt-2">
+                        <p className="text-lg font-bold text-foreground">
+                            €{product.price.toFixed(2)}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                            Limit: {product.basketLimit}
+                        </p>
+                    </div>
                     {quantity > 0 && (
-                        <p className="text-sm text-muted-foreground">In basket: {quantity}</p>
+                        <p className="text-sm text-muted-foreground mt-2">In basket: {quantity}</p>
                     )}
                     {quantity >= product.basketLimit && (
-                        <p className="text-sm text-destructive">Basket limit reached</p>
+                        <p className="text-sm text-destructive mt-1">Basket limit reached</p>
                     )}
                 </CardContent>
                 <CardFooter className="flex gap-2">

@@ -33,23 +33,30 @@ export default function ProductList() {
     return (
         <div className="container mx-auto p-4">
             <header className="flex justify-between items-center mb-6 p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
-                <h1 className="text-2xl font-bold text-foreground">Products</h1>
+                <div>
+                    <h1 className="text-2xl font-bold text-foreground">Products</h1>
+                    <p className="text-sm text-muted-foreground mt-1">
+                        {products.length} items available
+                    </p>
+                </div>
                 <div className="flex items-center gap-4">
                     <ViewToggle currentView={viewMode} onViewChange={setViewMode} />
-                    <Button
-                        variant="ghost"
-                        onClick={() => navigate('/checkout')}
-                        className="text-foreground hover:bg-foreground/10"
-                    >
-                        Items: {itemCount}
-                    </Button>
-                    <Button
-                        variant="ghost"
-                        onClick={() => navigate('/checkout')}
-                        className="text-foreground hover:bg-foreground/10"
-                    >
-                        Total: €{totalCost.toFixed(2)}
-                    </Button>
+                    <div className="flex flex-col items-end">
+                        <Button
+                            variant="ghost"
+                            onClick={() => navigate('/checkout')}
+                            className="text-foreground hover:bg-foreground/10"
+                        >
+                            Items: {itemCount}
+                        </Button>
+                        <Button
+                            variant="ghost"
+                            onClick={() => navigate('/checkout')}
+                            className="text-foreground hover:bg-foreground/10"
+                        >
+                            Total: €{totalCost.toFixed(2)}
+                        </Button>
+                    </div>
                 </div>
             </header>
 
