@@ -1,6 +1,3 @@
----
-title: 'Assessment for Exact Online through Geektastic'
----
 
 ## Project goals
 don't know yet
