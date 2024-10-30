@@ -1,71 +1,27 @@
-Project Goals
-To be determined
-Completed Tasks
+---
+title: 'Assessment for Exact Online through Geektastic'
+---
 
-Initialized React project using Vite
-Integrated TailwindCSS
-Configured ESLint and Prettier
-Added utility scripts for:
+## Project goals
+don't know yet
 
-Cleaning
-Rebuilding
-Project restart
+## Did
+- Scaffold React project with Vite
+- Add TailwindCSS  
+- Add some basic eslint and prettier config
+- Add some basic scripts for cleaning, rebuilding and restarting the project which I always re-use.
+- Write readme
+- add shadcn for ui components
+- redux, redux toolkit, persist, sonner (toast) wouter(router)
+- Add items to cart, persist state, remove from cart, allow max qty per item based on stock, mock a checkout view.
 
+## Did not
+- tests, no time and little experience so would requrie to much time ti implement. Also love to discuss some test thoughts as it's in my (and alot of others) more often than not a waste of time. *!* very much application dependand *!*)
 
-Created documentation (README)
-Implemented UI components using shadcn
-Integrated key libraries:
+## Would like to
+- add some more tests
+- add some more documentation
+- feelsl ike a hot mess, would like to refactor, clean up and modularize some things. checkout in a checkout feature for example, but the end results works, and looks decent.
 
-Redux & Redux Toolkit for state management
-Redux Persist for state persistence
-Sonner for toast notifications
-Wouter for routing
-
-
-Implemented shopping cart functionality:
-
-Add/remove items
-State persistence
-Stock-based quantity limits
-Basic checkout view mockup
-
-
-
-Incomplete Tasks
-
-Testing implementation
-
-Limited by time constraints and experience
-Would welcome discussion about testing strategies
-Note: Testing value is highly application-dependent
-
-
-
-Future Improvements
-
-Expand test coverage
-Enhance documentation
-Code refactoring:
-
-Improve modularization
-Clean up architecture
-Extract checkout into separate feature
-Note: Current implementation is functional and visually acceptable
-
-
-
-Technical Background
-
-Primary expertise in Next.js development
-Previous experience with long-term corporate SaaS projects (10+ years) using separate backend architecture
-State management:
-
-Minimal experience in Redux
-Typically prefer Zustand
-
-
-Testing:
-
-Limited practical experience
-Familiar with testing libraries and concepts
-Eager to expand knowledge in this area
+## Experience
+I almost exclusvoly develop NextJS exepct for some coorporate SaaS with seperate back-end at my old jobs which weere projects running on 10+ years. State manamgent wise, i've never used Redux, I always opt for Zustand. Regarding testing, little to no experiecne, althrough I know the libraries by name so we'lll see how far I get.
